@@ -1,5 +1,3 @@
-"use client";
-
 import styled from "@emotion/styled";
 
 export const LoginView = () => {
@@ -12,4 +10,5 @@ const LoginViewWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20rem;
+  color: #000;
 `;

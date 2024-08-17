@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../styles/globals.css";
 import { ThemeProviders } from "@/styles/ThemeProviders";
+import { StoreProviders } from "@/store/StoreProviders";
 
 export const metadata: Metadata = {
   title: "GoGo web app",
@@ -13,10 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProviders>
-      <html lang="en">
-        <body>{children}</body>
-      </html>
-    </ThemeProviders>
+    <StoreProviders>
+      <ThemeProviders>
+        <html lang="en">
+          <body>{children}</body>
+        </html>
+      </ThemeProviders>
+    </StoreProviders>
   );
 }

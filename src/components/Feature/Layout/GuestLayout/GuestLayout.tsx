@@ -1,22 +1,16 @@
 "use client";
 
 import styled from "@emotion/styled";
-import { redirect, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 interface Props {
   children: React.ReactNode;
 }
 
 export const GuestLayoutRouter = ({ children }: Props) => {
-  return (
-    <GuestLayoutContainer>
-      <div>Long Nguyen</div>
-    </GuestLayoutContainer>
-  );
+  return <GuestLayoutContainer>{children}</GuestLayoutContainer>;
 };
 
 const GuestLayoutContainer = styled.div`
-  background-color: aqua;
-  height: 100vh;
+  background-color: #f5f5f5;
+  min-height: 100vh;
 `;
