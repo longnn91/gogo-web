@@ -4,9 +4,9 @@ const nextConfig = {
   swcMinify: true,
   compiler: {
     emotion: {
+      cssPropOptimization: true,
       autoLabel: "dev-only",
       labelFormat: "[local]",
-      cssPropOptimization: true,
     },
   },
 };
